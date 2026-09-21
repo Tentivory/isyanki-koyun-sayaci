@@ -1,0 +1,14 @@
+name: Koyun Denetim
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  say:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Protokolü çalıştır
+        run: python3 koyun_sayaci.py
